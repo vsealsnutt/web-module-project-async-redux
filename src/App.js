@@ -26,6 +26,8 @@ function App(props) {
       }
 
       <button onClick={handleClick}>Get another cat fact!</button>
+      <img src='https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cat-quotes-1543599392.jpg?crop=1.00xw:0.759xh;0,0&resize=980:*' 
+        alt='kitten in a blanket' />
     </div>
   );
 }
