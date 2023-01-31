@@ -1,12 +1,11 @@
 import React from 'react';
-import data from '../data/facts';
 
 const CatFact = (props) => {
-    const { fact } = props;
+    const { getFact } = props;
 
     return (
         <div className='fact'>
-            <p>{props.fact}</p>
+            <p>{}</p>
         </div>
     )
 }
