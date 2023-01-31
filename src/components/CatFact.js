@@ -1,11 +1,11 @@
 import React from 'react';
 
 const CatFact = (props) => {
-    const { getFact } = props;
+    const { fact } = props;
 
     return (
         <div className='fact'>
-            <p>{}</p>
+            <p>{fact}</p>
         </div>
     )
 }

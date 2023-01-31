@@ -2,18 +2,13 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import CatFact from './components/CatFact';
-
 import { getFact } from './actions/factsActions';
 
 import './App.css';
 
 function App(props) {
 
-  const { loading, error, getFact } = props;
-
-  if (error !== '') {
-    return <h3>{error}</h3>;
-  }
+  const { loading, error, getFact, fact } = props;
 
   const handleClick = () => {
     getFact();
@@ -23,10 +18,13 @@ function App(props) {
     <div className='App'>
       <h1>Daily Cat Facts</h1>
       {
-        loading ? <h3>Loading new fact...</h3> : <CatFact />
+        (error !== '') && <h3>{error}</h3>
+      }
+      {
+        loading ? <h3>Loading new fact...</h3> : <CatFact fact={fact} />
       }
 
-      <button onClick={() => props.handleClick}>Get another cat fact!</button>
+      <button onClick={handleClick}>Get another cat fact!</button>
     </div>
   );
 }
