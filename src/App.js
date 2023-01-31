@@ -17,6 +17,7 @@ function App(props) {
   return (
     <div className='App'>
       <h1>Daily Cat Facts</h1>
+      <h3>Today's Fact:</h3>
       {
         (error !== '') && <h3>{error}</h3>
       }
